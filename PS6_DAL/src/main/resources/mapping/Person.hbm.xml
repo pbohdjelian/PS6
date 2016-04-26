@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 13, 2014 2:49:57 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping default-access="field" default-lazy="false">
+ <class lazy="true" name="domain.PersonDomainModel" table="per">
+  <id name="PersonID" type="uuid-char">
+   <column length="40" name="StudentID"/>
+  </id>
+  <property generated="never" lazy="false" name="FirstName" type="string">
+   <column length="20" name="FirstName" not-null="true"/>
+  </property>
+  <property access="field" generated="never" lazy="false"
+   name="MiddleName" type="string" unique="true" update="true">
+   <column length="20" name="MiddleName" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="LastName" type="string">
+   <column length="20" name="LastName" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="DOB" type="date">
+   <column length="7" name="DOB" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>
